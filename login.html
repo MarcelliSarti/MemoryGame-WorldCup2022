@@ -2,11 +2,49 @@
 
 <head>
   <link href="css/login.css" rel="stylesheet">
+  <script src="js/login.js"></script>
   <title> Login </title>
 </head>
 
 <body>
-  <h1> Login </h1>
+  <div class="main">
+
+    <div class="left">
+      <img src="img/loginLogo.jpg" />
+    </div>
+
+    <div class="rigth">
+
+      <div class="login">
+
+        <div class="logo">
+          <img src="img/miniLogo.png" />
+        </div>
+
+        <form class="infos" action="home.html">
+          <h1> Login </h1>
+
+          <div class="field">
+            <input type="text" required="">
+            <label> Usuário </label>
+          </div>
+
+          <div class="field">
+            <input type="password" required="" id="txtSenha">
+            <img src="img/eye.png" onclick="verSenha()" />
+            <label> Senha </label>
+          </div>
+
+          <span> <a href="cadastro.html"> Não possui cadastro? Cadastrar-se! </a></span>
+
+          <input type="submit" class="button" value="Entrar">
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
 </body>
 
 </html>
