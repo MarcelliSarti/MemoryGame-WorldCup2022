@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: QatarMedium;
+  src: url(../font/GraphikArabicMedium.otf);
+}
+
+@font-face {
+  font-family: QatarBold;
+  src: url(../font/Qatar2022Arabic-Bold.ttf);
+}
+
+@font-face {
+  font-family: QatarHeavy;
+  src: url(../font/Qatar2022Arabic-Heavy.ttf);
+}
