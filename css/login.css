@@ -89,6 +89,15 @@
   font-family: QatarMedium;
   gap: 12px;
   width: 100%;
+  position: relative;
+}
+
+.main .rigth .login .infos img {
+  cursor: pointer;
+  right: 0;
+  bottom: 5px;
+  position: absolute;
+  width: 20px;
 }
 
 .main .rigth .login .infos .field input {
@@ -103,10 +112,6 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-align: border-box;
-}
-
-.main .rigth .login .infos .field {
-  position: relative;
 }
 
 .main .rigth .login .infos .field label {

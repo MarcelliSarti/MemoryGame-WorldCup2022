@@ -88,6 +88,15 @@
 .main .rigth .cadastro .infos .field {
   font-family: QatarMedium;
   width: 100%;
+  position: relative;
+}
+
+.main .rigth .cadastro .infos img {
+  cursor: pointer;
+  right: 0;
+  bottom: 5px;
+  position: absolute;
+  width: 20px;
 }
 
 .main .rigth .cadastro .infos .field input {
@@ -102,10 +111,6 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-align: border-box;
-}
-
-.main .rigth .cadastro .infos .field {
-  position: relative;
 }
 
 .main .rigth .cadastro .infos .field label {
