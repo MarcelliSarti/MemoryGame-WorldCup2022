@@ -18,3 +18,90 @@
   font-family: QatarHeavy;
   src: url(../font/Qatar2022Arabic-Heavy.ttf);
 }
+.page{
+  display: flex;
+  height: 100%;
+}
+
+.sideBar{
+  background-color:#9A1032;
+  padding: 4px;
+  position: fixed;
+  margin: auto;
+  cursor: pointer;
+  align-items: center;
+  z-index: 100;
+  height: 100%;
+}
+
+.collapse{
+  display: flex;
+  flex-direction: column;
+  width: 40px !important;
+  justify-content: space-between; 
+  position: relative;
+  transition: all 0.5s ease;
+  height: 100%;
+}
+
+.sideBar a{
+  display: flex;
+  text-decoration: none;
+  color: white;
+  font-family: QatarBold;
+  align-items: center;
+  height: 50px;
+}
+
+.logo{
+  height: 85px !important;
+}
+
+img{
+  height: auto;
+  width: 35px;
+}
+
+.text{
+  padding: 16px;
+  display: none;
+}
+
+.logoutLogo{
+  transform: rotate(180deg);
+}
+
+.sideBar a:hover{
+  background-color: #d61645;
+  border-radius: 6px;
+  width: 224px;
+}
+.sideBar a:hover > .text{
+  display: block;
+}
+
+.expanded{
+  width: 230px !important;
+  transition: all 0.5s ease;
+}
+
+.expanded .text {
+  padding: 16px;
+  display: block;
+}
+
+.selected{
+  background-color: #d61645;
+  border-radius: 6px;
+  width: 39px;
+  height: 50px;
+}
+
+
+.expanded .selected{
+  width: 224px;
+}
+
+.line{
+  border: 1px solid white;
+}
