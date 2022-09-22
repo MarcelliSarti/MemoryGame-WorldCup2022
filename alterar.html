@@ -1,12 +1,57 @@
 <html>
+  <head>
+    <link href="css/alterar.css" rel="stylesheet" />
+    <script src="js/alterar.js"></script>
+    <title>Alterar Usuário</title>
+  </head>
 
-<head>
-  <link href="css/alterar.css" rel="stylesheet">
-  <title> Alterar Usuário </title>
-</head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="head">
+          <h1>Alterar Usuário</h1>
+        </div>
+        <div class="body">
+          <div class="infos">
+            <div class="field">
+              <input type="text" required="" />
+              <label> Nome Completo </label>
+            </div>
 
-<body>
-  <h1> Alterar Usuário </h1>
-</body>
+            <div class="field">
+              <input type="date" />
+              <label> Data de nascimento </label>
+            </div>
 
+            <div class="field">
+              <input type="text" required="" />
+              <label> CPF </label>
+            </div>
+
+            <div class="field">
+              <input type="text" required="" />
+              <label> Telefone </label>
+            </div>
+
+            <div class="field">
+              <input type="text" required="" />
+              <label> E-mail </label>
+            </div>
+
+            <div class="field">
+              <input type="text" required="" />
+              <label> Usuário </label>
+            </div>
+
+            <div class="field">
+              <input type="password" id="txtSenha" required="" />
+              <label> Senha </label>
+              <img class="icone" src="img/eye.png" onclick="verSenha()" />
+            </div>
+          </div>
+          <button class="button" onclick="temCerteza()">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
