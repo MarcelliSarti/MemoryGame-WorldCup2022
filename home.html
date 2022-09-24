@@ -3,6 +3,7 @@
 <head>
   <link href="css/home.css" rel="stylesheet">
   <link href="css/sideBar.css" rel="stylesheet">
+  <script defer src="./js/home.js"></script>
   <title>Home</title>
 </head>
 
@@ -60,25 +61,25 @@
               <div class="button"> Ativar trapaça</div>
               <div class="button active">Desativar trapaça</div>
             </div>
-          <div class="button">Encerrar partida</div>
+          <div class="button" onclick="loadCards()">Encerrar partida</div>
         </div>
 
         <div class="modal">
           <div class="modal-content">
             <div class="title">Jogo da Memória</div>
             <div class="content-subtitle">
-              <div class="line"></div>
+              <div class="modal-line"></div>
               <div class="subtitle">Escolha o modo de jogo</div>
-              <div class="line"></div>
+              <div class="modal-line"></div>
             </div>
             <div class="modo-jogo">
               <div class="button active">Clássico</div>
               <div class="button">Contra o tempo</div>
             </div>
             <div class="content-subtitle">
-              <div class="line"></div>
+              <div class="modal-line"></div>
               <div class="subtitle">Escolha o tamanho do tabuleiro</div>
-              <div class="line"></div>
+              <div class="modal-line"></div>
             </div>
             <div class="tamanho-tabuleiro">
               <div class="button active">2x2</div>
@@ -87,21 +88,38 @@
               <div class="button">8x8</div>
             </div>
             <div class="space"></div>
-            <div class="line"></div>
+            <div class="modal-line"></div>
             <div class="space"></div>
             <div class="button iniciar">Iniciar nova partida</div>
             <div class="space"></div>
           </div>
         </div>
 
-        <div class="cards">
-          <div class="card">
-            <div class="front face"></div>
-            <div class="back face"></div>
+        <div class="cards" id="cards">
+      
+          <div class="card" id="show">
+            <div class="front face">
+              <div class="contour">
+                <img src="./img/bandeiras/bra.png" alt="Brasil">
+              </div>
+            </div>
+            <div class="back face">
+              <div class="contour">
+                <img src="./img/miniLogo.png" alt="icon">
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <div class="front face"></div>
-            <div class="back face"></div>
+          <div class="card" id="show">
+            <div class="front face">
+              <div class="contour">
+                <img src="./img/bandeiras/bra.png" alt="Brasil">
+              </div>
+            </div>
+            <div class="back face showFace">
+              <div class="contour">
+                <img src="./img/miniLogo.png" alt="icon">
+              </div>
+            </div>
           </div>
         </div>
       </div>
