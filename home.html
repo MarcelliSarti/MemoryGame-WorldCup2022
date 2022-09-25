@@ -3,126 +3,126 @@
 <head>
   <link href="css/home.css" rel="stylesheet">
   <link href="css/sideBar.css" rel="stylesheet">
-  <script defer src="./js/home.js"></script>
   <title>Home</title>
 </head>
 
 <body>
   <div class="page">
-    <nav class="sideBar"> 
+    <nav class="sideBar">
       <div class="collapse">
-          <div class="overBar">
-                <a href="#" class="logo">
-                  <img src="./img/miniLogo.png" alt="icon">
-                    <div class="text"> 
-                      Jogo da memória
-                    </div>
-                </a>
-                <div class="line"></div>                  
-                <a href="./login.html">
-                  <img src="./img/user.png" alt="icon">
-                    <div class="text">
-                      Olá Wally
-                    </div>  
-                </a>
-                <a href="./home.html" class="selected">
-                  <img src="./img/home.png" alt="icon" >
-                    <div class="text">
-                      Home
-                    </div>
-                </a>
-                <a href="./alterar.html">
-                  <img src="./img/edit.png" alt="icon" > 
-                    <div class="text">
-                      Editar informações 
-                    </div>
-                </a>
-              <a href="./ranking.html">
-                <img src="./img/ranking.png" alt="icon" > 
-                  <div class="text"> 
-                    Ranking
-                  </div>
-              </a> 
-          </div>
-          <div class="underBar">
-              <a href="./login.html">
-                <img src="./img/logout.png" alt="icon" class="logoutLogo">
-                  <div class="text">
-                    Logout
-                  </div>
-              </a>
-          </div>
+        <div class="overBar">
+          <a href="#" class="logo">
+            <img src="./img/miniLogo.png" alt="icon">
+            <div class="text">
+              Jogo da memória
+            </div>
+          </a>
+          <div class="line"></div>
+          <a href="./alterar.html">
+            <img src="./img/user.png" alt="icon">
+            <div class="text">
+              Olá, Wally!
+            </div>
+          </a>
+          <a href="./home.html" class="selected">
+            <img src="./img/home.png" alt="icon">
+            <div class="text">
+              Home
+            </div>
+          </a>
+          <a href="./alterar.html">
+            <img src="./img/edit.png" alt="icon">
+            <div class="text">
+              Editar informações
+            </div>
+          </a>
+          <a href="./ranking.html">
+            <img src="./img/ranking.png" alt="icon">
+            <div class="text">
+              Ranking
+            </div>
+          </a>
         </div>
+        <div class="underBar">
+          <a href="./login.html">
+            <img src="./img/logout.png" alt="icon" class="logoutLogo">
+            <div class="text">
+              Logout
+            </div>
+          </a>
+        </div>
+      </div>
     </nav>
-      <div class="main">
-        <div class="buttons">
-          <div class="button time"><img src="./img/relogio.png" alt="icon">00:00</div>
-            <div class="middle">
-              <div class="button"> Ativar trapaça</div>
-              <div class="button active">Desativar trapaça</div>
-            </div>
-          <div class="button" onclick="loadCards()">Encerrar partida</div>
+    <div class="main">
+      <div class="buttons">
+        <div class="button time"><img src="./img/relogio.png" alt="icon">00:00</div>
+        <div class="middle">
+          <div class="button"> Ativar trapaça</div>
+          <div class="button active">Desativar trapaça</div>
         </div>
+        <div class="button" onclick="loadCards()">Encerrar partida</div>
+      </div>
 
-        <div class="modal">
-          <div class="modal-content">
-            <div class="title">Jogo da Memória</div>
-            <div class="content-subtitle">
-              <div class="modal-line"></div>
-              <div class="subtitle">Escolha o modo de jogo</div>
-              <div class="modal-line"></div>
-            </div>
-            <div class="modo-jogo">
-              <div class="button active">Clássico</div>
-              <div class="button">Contra o tempo</div>
-            </div>
-            <div class="content-subtitle">
-              <div class="modal-line"></div>
-              <div class="subtitle">Escolha o tamanho do tabuleiro</div>
-              <div class="modal-line"></div>
-            </div>
-            <div class="tamanho-tabuleiro">
-              <div class="button active">2x2</div>
-              <div class="button">4x4</div>
-              <div class="button">6x6</div>
-              <div class="button">8x8</div>
-            </div>
-            <div class="space"></div>
+      <div class="modal">
+        <div class="modal-content">
+          <div class="title">Jogo da Memória</div>
+          <div class="content-subtitle">
             <div class="modal-line"></div>
-            <div class="space"></div>
-            <div class="button iniciar">Iniciar nova partida</div>
-            <div class="space"></div>
+            <div class="subtitle">Escolha o modo de jogo</div>
+            <div class="modal-line"></div>
+          </div>
+          <div class="modo-jogo">
+            <div class="button active">Clássico</div>
+            <div class="button">Contra o tempo</div>
+          </div>
+          <div class="content-subtitle">
+            <div class="modal-line"></div>
+            <div class="subtitle">Escolha o tamanho do tabuleiro</div>
+            <div class="modal-line"></div>
+          </div>
+          <div class="tamanho-tabuleiro">
+            <div class="button active">2x2</div>
+            <div class="button">4x4</div>
+            <div class="button">6x6</div>
+            <div class="button">8x8</div>
+          </div>
+          <div class="space"></div>
+          <div class="modal-line"></div>
+          <div class="space"></div>
+          <div class="button iniciar">Iniciar nova partida</div>
+          <div class="space"></div>
+        </div>
+      </div>
+
+      <div class="cards" id="cards">
+
+        <div class="card" id="show">
+          <div class="front face">
+            <div class="contour">
+              <img src="./img/bandeiras/bra.png" alt="Brasil">
+            </div>
+          </div>
+          <div class="back face">
+            <div class="contour">
+              <img src="./img/miniLogo.png" alt="icon">
+            </div>
           </div>
         </div>
-
-        <div class="cards" id="cards">
-      
-          <div class="card" id="show">
-            <div class="front face">
-              <div class="contour">
-                <img src="./img/bandeiras/bra.png" alt="Brasil">
-              </div>
-            </div>
-            <div class="back face">
-              <div class="contour">
-                <img src="./img/miniLogo.png" alt="icon">
-              </div>
+        <div class="card" id="show">
+          <div class="front face">
+            <div class="contour">
+              <img src="./img/bandeiras/bra.png" alt="Brasil">
             </div>
           </div>
-          <div class="card" id="show">
-            <div class="front face">
-              <div class="contour">
-                <img src="./img/bandeiras/bra.png" alt="Brasil">
-              </div>
-            </div>
-            <div class="back face showFace">
-              <div class="contour">
-                <img src="./img/miniLogo.png" alt="icon">
-              </div>
+          <div class="back face showFace">
+            <div class="contour">
+              <img src="./img/miniLogo.png" alt="icon">
             </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </body>
+
 </html>

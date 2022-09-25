@@ -1,57 +1,111 @@
 <html>
-  <head>
-    <link href="css/alterar.css" rel="stylesheet" />
-    <script src="js/alterar.js"></script>
-    <title>Alterar Usuário</title>
-  </head>
 
-  <body>
+<head>
+  <link href="css/alterar.css" rel="stylesheet">
+  <link href="css/forms.css" rel="stylesheet">
+  <link href="css/sideBar.css" rel="stylesheet">
+  <title>Alterar Usuário</title>
+</head>
+
+<body>
+  <div class="page">
+    <nav class="sideBar">
+      <div class="collapse">
+        <div class="overBar">
+          <a href="#" class="logo">
+            <img src="./img/miniLogo.png" alt="icon">
+            <div class="text">
+              Jogo da memória
+            </div>
+          </a>
+          <div class="line"></div>
+          <a href="./alterar.html">
+            <img src="./img/user.png" alt="icon">
+            <div class="text">
+              Olá, Wally!
+            </div>
+          </a>
+          <a href="./home.html" class="selected">
+            <img src="./img/home.png" alt="icon">
+            <div class="text">
+              Home
+            </div>
+          </a>
+          <a href="./alterar.html">
+            <img src="./img/edit.png" alt="icon">
+            <div class="text">
+              Editar informações
+            </div>
+          </a>
+          <a href="./ranking.html">
+            <img src="./img/ranking.png" alt="icon">
+            <div class="text">
+              Ranking
+            </div>
+          </a>
+        </div>
+        <div class="underBar">
+          <a href="./login.html">
+            <img src="./img/logout.png" alt="icon" class="logoutLogo">
+            <div class="text">
+              Logout
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
     <div class="main">
       <div class="container">
-        <div class="head">
-          <h1>Alterar Usuário</h1>
-        </div>
+        <div class="head"> Alterar Usuário </div>
         <div class="body">
-          <div class="infos">
-            <div class="field">
-              <input type="text" required="" />
+          <form class="infos">
+
+            <div class="field alterar">
+              <input type="text" required value="Wallyson" />
               <label> Nome Completo </label>
             </div>
 
-            <div class="field">
-              <input type="date" />
+            <div class="field alterar">
+              <input type="text" value="08/01/2003" readonly />
               <label> Data de nascimento </label>
             </div>
 
-            <div class="field">
-              <input type="text" required="" />
+            <div class="field alterar">
+              <input type="text" required value="111.111.111-11" readonly />
               <label> CPF </label>
             </div>
 
-            <div class="field">
-              <input type="text" required="" />
+            <div class="field alterar">
+              <input type="text" required value="(11) 11111-1111" />
               <label> Telefone </label>
             </div>
 
-            <div class="field">
-              <input type="text" required="" />
+            <div class="field alterar">
+              <input type="text" required value="wallyson@gmail.com" />
               <label> E-mail </label>
             </div>
 
-            <div class="field">
-              <input type="text" required="" />
+            <div class="field alterar">
+              <input type="text" required value="wallyson" readonly />
               <label> Usuário </label>
             </div>
 
-            <div class="field">
-              <input type="password" id="txtSenha" required="" />
+            <div class="field alterar">
+              <input type="password" id="txtSenha" value="1234" />
               <label> Senha </label>
-              <img class="icone" src="img/eye.png" onclick="verSenha()" />
+              <img class="icone" src="./img/eye.png" />
             </div>
-          </div>
-          <button class="button" onclick="temCerteza()">Salvar</button>
+
+            <input type="submit" class="button alterarB" value="Salvar" />
+
+          </form>
+
+
         </div>
       </div>
     </div>
-  </body>
+  </div>
+
+</body>
+
 </html>

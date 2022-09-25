@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: QatarMedium;
+  src: url(../font/GraphikArabicMedium.otf);
+}
+
+@font-face {
+  font-family: QatarBold;
+  src: url(../font/Qatar2022Arabic-Bold.ttf);
+}
+
+@font-face {
+  font-family: QatarHeavy;
+  src: url(../font/Qatar2022Arabic-Heavy.ttf);
+}
+
+h1 {
+  font-family: QatarBold;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  font-family: QatarMedium;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: #fff;
+  letter-spacing: 2px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-align: border-box;
+}
+
+.field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.field input:read-only~label,
+.field input:focus~label,
+.field input:valid~label,
+.field .date~label {
+  top: -20px;
+  left: 0;
+}
+
+.main .rigth .login .infos a,
+.button {
+  font-family: QatarBold;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 20px;
+  border: solid 1px white;
+  border-radius: 20px;
+  background-color: white;
+  color: #9A1032;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  width: 102%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.infos img {
+  cursor: pointer;
+  right: 0;
+  bottom: 5px;
+  position: absolute;
+  width: 20px;
+  height: auto;
+}
+
+a {
+  font-family: QatarBold;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
