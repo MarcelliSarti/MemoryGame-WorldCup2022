@@ -72,3 +72,45 @@
 .field input:read-only {
   opacity: 0.8;
 }
+
+.modal {
+  z-index: 101 !important;
+}
+
+.modal-content {
+  width: 35% !important;
+}
+
+.buttons {
+  display: flex;
+}
+
+.cancel {
+  background-color: #9A1032;
+  color: white !important;
+}
+
+.cancel:hover {
+  opacity: 0.9;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border: 2px solid #9A1032;
+  border-radius: 50%;
+  width: 18%;
+  color: #9A1032;
+  font-size: 300%;
+}
+
+.save {
+  color: #9A1032;
+  font-size: 150%;
+}
+
+.modal {
+  display: none !important;
+}

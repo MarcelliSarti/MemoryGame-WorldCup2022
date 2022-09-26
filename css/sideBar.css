@@ -1,30 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: QatarMedium;
-  src: url(../font/GraphikArabicMedium.otf);
-}
-
-@font-face {
-  font-family: QatarBold;
-  src: url(../font/Qatar2022Arabic-Bold.ttf);
-}
-
-@font-face {
-  font-family: QatarHeavy;
-  src: url(../font/Qatar2022Arabic-Heavy.ttf);
-}
-.page{
+.page {
   display: flex;
   height: 100%;
 }
 
-.sideBar{
-  background-color:#9A1032;
+.sideBar {
+  background-color: #9A1032;
   padding: 4px;
   position: fixed;
   margin: auto;
@@ -34,17 +14,17 @@
   height: 100%;
 }
 
-.collapse{
+.collapse {
   display: flex;
   flex-direction: column;
   width: 40px !important;
-  justify-content: space-between; 
+  justify-content: space-between;
   position: relative;
   transition: all 0.5s ease;
   height: 100%;
 }
 
-.sideBar a{
+.sideBar a {
   display: flex;
   text-decoration: none;
   color: white;
@@ -53,34 +33,35 @@
   height: 50px;
 }
 
-.logo{
+.logo {
   height: 85px !important;
 }
 
-img{
+img {
   height: auto;
   width: 35px;
 }
 
-.text{
+.text {
   padding: 16px;
   display: none;
 }
 
-.logoutLogo{
+.logoutLogo {
   transform: rotate(180deg);
 }
 
-.sideBar a:hover{
+.sideBar a:hover {
   background-color: #d61645;
   border-radius: 6px;
   width: 224px;
 }
-.sideBar a:hover > .text{
+
+.sideBar a:hover>.text {
   display: block;
 }
 
-.expanded{
+.expanded {
   width: 230px !important;
   transition: all 0.5s ease;
 }
@@ -90,7 +71,7 @@ img{
   display: block;
 }
 
-.selected{
+.selected {
   background-color: #d61645;
   border-radius: 6px;
   width: 39px;
@@ -98,10 +79,10 @@ img{
 }
 
 
-.expanded .selected{
+.expanded .selected {
   width: 224px;
 }
 
-.line{
+.line {
   border: 1px solid white;
 }
