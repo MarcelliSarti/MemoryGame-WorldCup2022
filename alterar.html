@@ -1,11 +1,12 @@
-<html>
+<!DOCTYPE html>
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link href="css/alterar.css" rel="stylesheet">
   <link href="css/forms.css" rel="stylesheet">
   <link href="css/modal.css" rel="stylesheet">
   <link href="css/sideBar.css" rel="stylesheet">
-  <title>Alterar Usuário</title>
+  <title>Memory Game</title>
 </head>
 
 <body>
@@ -21,25 +22,25 @@
           </a>
           <div class="line"></div>
           <a href="./alterar.html">
-            <img src="./img/user.png" alt="icon">
+            <img src="./img/user.svg" alt="icon">
             <div class="text">
               Olá, Wally!
             </div>
           </a>
           <a href="./home.html" class="selected">
-            <img src="./img/home.png" alt="icon">
+            <img src="./img/home.svg" alt="icon">
             <div class="text">
               Home
             </div>
           </a>
           <a href="./alterar.html">
-            <img src="./img/edit.png" alt="icon">
+            <img src="./img/edit.svg" alt="icon">
             <div class="text">
               Editar informações
             </div>
           </a>
           <a href="./ranking.html">
-            <img src="./img/ranking.png" alt="icon">
+            <img src="./img/ranking.svg" alt="icon">
             <div class="text">
               Ranking
             </div>
@@ -47,7 +48,7 @@
         </div>
         <div class="underBar">
           <a href="./login.html">
-            <img src="./img/logout.png" alt="icon" class="logoutLogo">
+            <img src="./img/logout.svg" alt="icon" class="logoutLogo">
             <div class="text">
               Logout
             </div>
@@ -62,42 +63,46 @@
           <form class="infos">
 
             <div class="field alterar">
-              <input type="text" required value="Wallyson" />
+              <input type="text" required value="Wallyson">
               <label> Nome Completo </label>
             </div>
 
             <div class="field alterar">
-              <input type="text" value="08/01/2003" readonly />
+              <input type="text" value="08/01/2003" readonly>
               <label> Data de nascimento </label>
             </div>
 
             <div class="field alterar">
-              <input type="text" required value="111.111.111-11" readonly />
+              <input type="text" required value="111.111.111-11" readonly>
               <label> CPF </label>
             </div>
 
             <div class="field alterar">
-              <input type="text" required value="(11) 11111-1111" />
+              <input type="text" required value="(11) 11111-1111">
               <label> Telefone </label>
             </div>
 
             <div class="field alterar">
-              <input type="text" required value="wallyson@gmail.com" />
+              <input type="text" required value="wallyson@gmail.com">
               <label> E-mail </label>
             </div>
 
             <div class="field alterar">
-              <input type="text" required value="wallyson" readonly />
+              <input type="text" required value="wallyson" readonly>
               <label> Usuário </label>
             </div>
 
             <div class="field alterar">
-              <input type="password" id="txtSenha" value="1234" />
+              <input type="password" id="txtSenha" value="1234">
               <label> Senha </label>
-              <img class="icone" src="./img/eye.png" />
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#9A1032">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+              </svg>
             </div>
 
-            <input type="submit" class="button alterarB" value="Salvar" />
+            <input type="submit" class="button alterarB" value="Salvar">
 
           </form>
         </div>

@@ -1,39 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: QatarMedium;
-  src: url(../font/GraphikArabicMedium.otf);
-}
-
-@font-face {
-  font-family: QatarBold;
-  src: url(../font/Qatar2022Arabic-Bold.ttf);
-}
-
-@font-face {
-  font-family: QatarHeavy;
-  src: url(../font/Qatar2022Arabic-Heavy.ttf);
-}
-
-.main {
-  display: flex;
-  margin-left: 50px;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
 .table {
   border-spacing: 0;
-}
-
-.table {
-  background: #fff;
 }
 
 .table tr:nth-child(even) {
@@ -91,14 +57,10 @@
 }
 
 .change span {
-  height: 10px;
+  height: 12px;
 }
 
 .color {
   background-color: #9A1032;
   color: white;
-}
-
-.table .line-table {
-  border: 5px solid aqua !important;
 }

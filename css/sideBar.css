@@ -1,6 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: QatarMedium;
+  src: url(../font/GraphikArabicMedium.otf);
+}
+
+@font-face {
+  font-family: QatarBold;
+  src: url(../font/Qatar2022Arabic-Bold.ttf);
+}
+
+@font-face {
+  font-family: QatarHeavy;
+  src: url(../font/Qatar2022Arabic-Heavy.ttf);
+}
+
 .page {
   display: flex;
   height: 100%;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  margin-left: 50px;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .sideBar {
