@@ -65,7 +65,7 @@
         <div class="button">Encerrar partida</div>
       </div>
 
-      <div class="modal">
+      <div class="modal" id="modal">
         <div class="modal-content">
           <div class="title">Jogo da Memória</div>
           <div class="content-subtitle">
@@ -74,8 +74,8 @@
             <div class="modal-line"></div>
           </div>
           <div class="modo-jogo">
-            <div class="button active">Clássico</div>
-            <div class="button">Contra o tempo</div>
+            <div class="button active" id="classico" onclick="getValueModoJogo('classico')">Clássico</div>
+            <div class="button" id="contraotempo" onclick="getValueModoJogo('contraotempo')">Contra o tempo</div>
           </div>
           <div class="content-subtitle">
             <div class="modal-line"></div>
@@ -83,15 +83,15 @@
             <div class="modal-line"></div>
           </div>
           <div class="tamanho-tabuleiro">
-            <div class="button active">2x2</div>
-            <div class="button">4x4</div>
-            <div class="button">6x6</div>
-            <div class="button">8x8</div>
+            <div class="button active" id= "2" onclick="getValueTamanhoTabuleiro(2)">2x2</div>
+            <div class="button" id= "4" onclick="getValueTamanhoTabuleiro(4)">4x4</div>
+            <div class="button" id= "6" onclick="getValueTamanhoTabuleiro(6)">6x6</div>
+            <div class="button"id= "8" onclick="getValueTamanhoTabuleiro(8)">8x8</div>
           </div>
           <div class="space"></div>
           <div class="modal-line"></div>
           <div class="space"></div>
-          <div class="button modalButton">Iniciar nova partida</div>
+          <div class="button modalButton" onclick="startGame()">Iniciar nova partida</div>
           <div class="space"></div>
         </div>
       </div>
@@ -125,6 +125,7 @@
       </div>
     </div>
   </div>
+  <script defer src="./js/home.js"></script>
 </body>
 
 </html>
