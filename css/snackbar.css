@@ -1,0 +1,84 @@
+@font-face {
+  font-family: QatarBold;
+  src: url(../font/Qatar2022Arabic-Bold.ttf);
+}
+
+#snackbar {
+  font-family: QatarBold;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  visibility: hidden;
+  min-width: 250px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 2%;
+  top: 5%;
+}
+
+.ok {
+  background-color: #6AD936;
+}
+
+.error {
+  background-color: #9A1032;
+}
+
+
+#snackbar.showSnack {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  to {
+    top: 5%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  to {
+    top: 5%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 5%;
+    opacity: 1;
+  }
+
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 5%;
+    opacity: 1;
+  }
+
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}

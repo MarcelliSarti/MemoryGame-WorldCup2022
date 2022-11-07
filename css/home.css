@@ -124,3 +124,26 @@
 .modal {
   /* display: none !important; */
 }
+
+.got-right {
+  filter: saturate(0);
+  opacity: 0.5;
+}
+
+.loader {
+  display: block;
+  animation: is-rotating 1s infinite;
+  width: 100px;
+  height: 100px;
+  border: 6px solid #e5e5e5;
+  border-top-color: #9A1032;
+  border-radius: 50%;
+  z-index: 5;
+  position: fixed;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
