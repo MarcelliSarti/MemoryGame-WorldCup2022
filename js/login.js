@@ -12,7 +12,9 @@ function logOn() {
     createSnackBar("Senha incorreto, tente novamente!", "error");
     return false;
   } else {
-    setTimeout(createSnackBar("Usuário logado com sucesso, bem-vindo!", "ok"), 10000);
-    return true;
+    createSnackBar("Usuário logado com sucesso, bem-vindo!", "ok");
+    setTimeout(() => {
+      return true;
+    }, 1500);
   }
 }
