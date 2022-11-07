@@ -1,71 +1,66 @@
 <!DOCTYPE html>
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link href="css/home.css" rel="stylesheet">
   <link href="css/modal.css" rel="stylesheet">
   <link href="css/sideBar.css" rel="stylesheet">
+  <link href="css/snackbar.css" rel="stylesheet">
   <title>Memory Game</title>
 </head>
 
 <body>
   <div class="page">
-    <nav class="sideBar">
-      <div class="collapse">
-        <div class="overBar">
-          <div class="logo">
-            <img src="./img/miniLogo.png" alt="icon">
-            <div class="text">
-              Jogo da memória
-            </div>
+    <nav class="side-bar" onclick="expandeSideBar()">
+
+      <div class="collapse icons" id="collapse">
+
+        <div>
+          <div class="line logo">
+            <img src="./img/miniLogo.png">
+            <div class="show"> Memory Game </div>
           </div>
-          <div class="line"></div>
-          <a href="./alterar.html">
-            <img src="./img/user.svg" alt="icon">
-            <div class="text">
-              Olá, Wally!
-            </div>
+          <div class="space"></div>
+          <a href="historico.html" class="line">
+            <img src="./img/user.svg">
+            <div class="show"> Olá, Marcelli! </div>
           </a>
-          <a href="./home.html" class="selected">
-            <img src="./img/home.svg" alt="icon">
-            <div class="text">
-              Home
-            </div>
+          <a href="home.html" class="line selected-expanded">
+            <img src="./img/home.svg">
+            <div class="show"> Home </div>
           </a>
-          <a href="./alterar.html">
-            <img src="./img/edit.svg" alt="icon">
-            <div class="text">
-              Editar informações
-            </div>
+          <a href="alterar.html" class="line">
+            <img src="./img/edit.svg">
+            <div class="show"> Editar Informações </div>
           </a>
-          <a href="./ranking.html">
-            <img src="./img/ranking.svg" alt="icon">
-            <div class="text">
-              Ranking
-            </div>
+          <a href="ranking.html" class="line">
+            <img src="./img/ranking.svg">
+            <div class="show"> Ranking </div>
           </a>
         </div>
-        <div class="underBar">
-          <a href="./login.html">
-            <img src="./img/logout.svg" alt="icon" class="logoutLogo">
-            <div class="text">
-              Logout
-            </div>
-          </a>
-        </div>
+
+        <a href="login.html" class="line">
+          <img src="../img/logout.svg" class="logout">
+          <div class="show"> Logout </div>
+        </a>
+
       </div>
+
     </nav>
     <div class="main">
       <div class="buttons">
-        <div class="button time"><img src="./img/clock.svg" alt="icon">00:00</div>
-        <div class="middle">
-          <div class="button"> Ativar trapaça</div>
-          <div class="button active">Desativar trapaça</div>
+        <div class="button time"><img src="./img/clock.svg" alt="icon">
+          <div id="timer">00:00</div>
         </div>
-        <div class="button">Encerrar partida</div>
+        <div class="middle">
+          <div class="button" id="ativarTrapaca"> Ativar trapaça</div>
+          <div class="button active" id="desativarTrapaca">Desativar trapaça</div>
+        </div>
+        <div class="button" onclick="endGameButton()">Encerrar partida</div>
       </div>
 
-      <div class="modal">
+      <div class="modal" id="modal">
         <div class="modal-content">
           <div class="title">Jogo da Memória</div>
           <div class="content-subtitle">
@@ -74,8 +69,8 @@
             <div class="modal-line"></div>
           </div>
           <div class="modo-jogo">
-            <div class="button active">Clássico</div>
-            <div class="button">Contra o tempo</div>
+            <div class="button active" id="classico" onclick="getValueModoJogo('classico')">Clássico</div>
+            <div class="button" id="contraotempo" onclick="getValueModoJogo('contraotempo')">Contra o tempo</div>
           </div>
           <div class="content-subtitle">
             <div class="modal-line"></div>
@@ -83,21 +78,21 @@
             <div class="modal-line"></div>
           </div>
           <div class="tamanho-tabuleiro">
-            <div class="button active">2x2</div>
-            <div class="button">4x4</div>
-            <div class="button">6x6</div>
-            <div class="button">8x8</div>
+            <div class="button active" id="2" onclick="getValueTamanhoTabuleiro(2)">2x2</div>
+            <div class="button" id="4" onclick="getValueTamanhoTabuleiro(4)">4x4</div>
+            <div class="button" id="6" onclick="getValueTamanhoTabuleiro(6)">6x6</div>
+            <div class="button" id="8" onclick="getValueTamanhoTabuleiro(8)">8x8</div>
           </div>
-          <div class="space"></div>
+          <div class="spaces"></div>
           <div class="modal-line"></div>
-          <div class="space"></div>
-          <div class="button modalButton">Iniciar nova partida</div>
-          <div class="space"></div>
+          <div class="spaces"></div>
+          <div class="button modalButton" onclick="startGame()">Iniciar nova partida</div>
+          <div class="spaces"></div>
         </div>
       </div>
 
       <div class="cards" id="cards">
-
+        <!-- 
         <div class="card">
           <div class="front face">
             <div class="contour">
@@ -121,10 +116,15 @@
               <img src="./img/miniLogo.png" alt="icon">
             </div>
           </div>
-        </div>
+        </div> -->
+
       </div>
+      <div class="loader"></div>
     </div>
   </div>
+  <script defer src="./js/home.js"></script>
+  <script defer src="./js/sideBar.js"></script>
+  <script defer src="./js/snackbar.js"></script>
 </body>
 
 </html>

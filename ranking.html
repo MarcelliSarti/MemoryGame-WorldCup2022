@@ -1,58 +1,51 @@
 <!DOCTYPE html>
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href="css/ranking.css" rel="stylesheet">
+  <link href="css/tables.css" rel="stylesheet">
   <link href="css/sideBar.css" rel="stylesheet">
+  <script defer src="./js/sideBar.js"></script>
   <title> Memory Game </title>
 </head>
 
 <body>
   <div class="page">
-    <nav class="sideBar">
-      <div class="collapse">
-        <div class="overBar">
-          <a href="#" class="logo">
-            <img src="./img/miniLogo.png" alt="icon">
-            <div class="text">
-              Jogo da memória
-            </div>
+    <nav class="side-bar" onclick="expandeSideBar()">
+
+      <div class="collapse icons" id="collapse">
+
+        <div>
+          <div class="line logo">
+            <img src="./img/miniLogo.png">
+            <div class="show"> Memory Game </div>
+          </div>
+          <div class="space"></div>
+          <a href="historico.html" class="line">
+            <img src="./img/user.svg">
+            <div class="show"> Olá, Marcelli! </div>
           </a>
-          <div class="line"></div>
-          <a href="./alterar.html">
-            <img src="./img/user.svg" alt="icon">
-            <div class="text">
-              Olá, Wally!
-            </div>
+          <a href="home.html" class="line">
+            <img src="./img/home.svg">
+            <div class="show"> Home </div>
           </a>
-          <a href="./home.html" class="selected">
-            <img src="./img/home.svg" alt="icon">
-            <div class="text">
-              Home
-            </div>
+          <a href="alterar.html" class="line">
+            <img src="./img/edit.svg">
+            <div class="show"> Editar Informações </div>
           </a>
-          <a href="./alterar.html">
-            <img src="./img/edit.svg" alt="icon">
-            <div class="text">
-              Editar informações
-            </div>
-          </a>
-          <a href="./ranking.html">
-            <img src="./img/ranking.svg" alt="icon">
-            <div class="text">
-              Ranking
-            </div>
+          <a href="ranking.html" class="line selected-expanded">
+            <img src="./img/ranking.svg">
+            <div class="show"> Ranking </div>
           </a>
         </div>
-        <div class="underBar">
-          <a href="./login.html">
-            <img src="./img/logout.svg" alt="icon" class="logoutLogo">
-            <div class="text">
-              Logout
-            </div>
-          </a>
-        </div>
+
+        <a href="login.html" class="line">
+          <img src="../img/logout.svg" class="logout">
+          <div class="show"> Logout </div>
+        </a>
+
       </div>
+
     </nav>
     <div class="main">
       <table class="table">
@@ -68,37 +61,12 @@
             <th class="cell result border2"> Resultado </th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="line-table">
-            <td class="cell content color ">1°</td>
-            <td class="cell content change">
-              <span> ^ </span>
-              <span> ^ </span>
-            </td>
-            <td class="cell content"> Ricardo Soares </td>
-            <td class="cell content"> Clássico </td>
-            <td class="cell content"> 8x8 </td>
-            <td class="cell content"> 1min45s </td>
-            <td class="cell content"> 26/09/2022 </td>
-            <td class="cell content color"> <img src="./img/thumbUp.svg" alt="ganhou"> </td>
-          </tr>
-          <tr class="line-table">
-            <td class="cell content color border3">2°</td>
-            <td class="cell content change">
-              <span> ^ </span>
-              <span> ^ </span>
-            </td>
-            <td class="cell content"> Marcelli Sarti </td>
-            <td class="cell content"> Contra o tempo </td>
-            <td class="cell content"> 6x6 </td>
-            <td class="cell content"> 1min </td>
-            <td class="cell content"> 26/09/2022 </td>
-            <td class="cell content color border4"> <img src="./img/thumbDown.svg" alt="perdeu"> </td>
-          </tr>
+        <tbody id="tbody">
         </tbody>
       </table>
     </div>
   </div>
+  <script defer src="./js/ranking.js"></script>
 
 </body>
 

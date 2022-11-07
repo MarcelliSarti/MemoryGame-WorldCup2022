@@ -2,10 +2,11 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script defer src="./js/sideBar.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="css/tables.css" rel="stylesheet">
   <link href="css/sideBar.css" rel="stylesheet">
-  <title>Memory Game</title>
+  <script defer src="./js/sideBar.js"></script>
+  <title> Memory Game </title>
 </head>
 
 <body>
@@ -20,11 +21,11 @@
             <div class="show"> Memory Game </div>
           </div>
           <div class="space"></div>
-          <a href="historico.html" class="line">
+          <a href="historico.html" class="line selected-expanded">
             <img src="./img/user.svg">
             <div class="show"> Olá, Marcelli! </div>
           </a>
-          <a href="home.html" class="line selected-expanded">
+          <a href="home.html" class="line">
             <img src="./img/home.svg">
             <div class="show"> Home </div>
           </a>
@@ -46,11 +47,24 @@
       </div>
 
     </nav>
-
     <div class="main">
-      <p>Marcelli</p>
+      <table class="table">
+        <thead class="title">
+          <tr>
+            <th class="cell modo-jogo"> Modo Jogo </th>
+            <th class="cell tamanho-tabuleiro"> Tamanho Tabuleiro </th>
+            <th class="cell time"> <img src="./img/clock.svg" alt="relogio"> Tempo </th>
+            <th class="cell date"> Data </th>
+            <th class="cell result border2"> Resultado </th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
     </div>
   </div>
+  <script defer src="./js/historico.js"></script>
 </body>
 
 </html>

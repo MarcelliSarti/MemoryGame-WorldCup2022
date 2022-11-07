@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link href="css/login.css" rel="stylesheet">
   <link href="css/forms.css" rel="stylesheet">
+  <link href="css/snackbar.css" rel="stylesheet">
   <title> Memory Game </title>
 </head>
 
 <body>
-  <div class="main">
+  <div class="main page">
     <div class="left">
       <img src="img/loginLogo.jpg" alt="logo">
     </div>
@@ -20,17 +22,17 @@
           <img src="img/miniLogo.png" alt="logo">
         </div>
 
-        <form class="infos" action="home.html">
+        <form class="infos" action="home.html" onsubmit="return logOn()">
           <h1> Login </h1>
 
           <div class="field">
-            <input type="text" required>
+            <input type="text" id="txtUsuario" required>
             <label> Usuário </label>
           </div>
 
           <div class="field">
-            <input type="password" required>
-            <img src="img/eye.svg" alt="eye">
+            <input type="password" id="txtSenha" required>
+            <img src="img/eye.svg" alt="eye" id="verSenha">
             <label> Senha </label>
           </div>
 
@@ -42,6 +44,9 @@
       </div>
     </div>
   </div>
+  <script defer src="./js/senha.js"></script>
+  <script defer src="./js/login.js"></script>
+  <script defer src="./js/snackbar.js"></script>
 </body>
 
 </html>

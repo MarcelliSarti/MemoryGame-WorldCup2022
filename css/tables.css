@@ -1,25 +1,11 @@
 .table {
   border-spacing: 0;
+  border: solid #9A1032;
+  border-radius: 10px;
 }
 
 .table tr:nth-child(even) {
   background: rgba(1, 1, 1, 0.2);
-}
-
-.border1 {
-  border-radius: 10px 0 0 0;
-}
-
-.border2 {
-  border-radius: 0 10px 0 0;
-}
-
-.border3 {
-  border-radius: 0 0 0 10px;
-}
-
-.border4 {
-  border-radius: 0 0 10px 0;
 }
 
 .title {
@@ -58,6 +44,10 @@
 
 .change span {
   height: 12px;
+}
+
+.rotate {
+  transform: rotateX(180deg);
 }
 
 .color {

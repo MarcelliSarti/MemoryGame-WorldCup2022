@@ -1,14 +1,17 @@
 <!doctype html>
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link href="css/cadastro.css" rel="stylesheet">
   <link href="css/forms.css" rel="stylesheet">
+  <link href="css/snackbar.css" rel="stylesheet">
+  <script defer src="./js/sideBar.js"></script>
   <title> Memory Game </title>
 </head>
 
 <body>
-  <div class="main">
+  <div class="main page">
 
     <div class="left">
       <img src="img/loginLogo.jpg" alt="logo">
@@ -24,7 +27,7 @@
 
         <h1> Cadastro </h1>
 
-        <form class="infos">
+        <form class="infos" action="login.html" onsubmit="return validateCadastro()">
 
           <div class="field">
             <input type="text" required>
@@ -37,7 +40,7 @@
           </div>
 
           <div class="field">
-            <input type="text" required>
+            <input type="text" id="txtCpf" required>
             <label> CPF </label>
           </div>
 
@@ -47,18 +50,18 @@
           </div>
 
           <div class="field">
-            <input type="text" required>
+            <input type="text" id="txtEmail" required>
             <label> E-mail </label>
           </div>
 
           <div class="field">
-            <input type="text" required>
+            <input type="text" id="txtUsuario" required>
             <label> Usuário </label>
           </div>
 
           <div class="field">
             <input type="password" id="txtSenha" required>
-            <img src="img/eye.svg" alt="eye">
+            <img src="img/eye.svg" alt="eye" id="verSenha">
             <label> Senha </label>
           </div>
 
@@ -72,6 +75,9 @@
     </div>
 
   </div>
+  <script defer src="./js/senha.js"></script>
+  <script defer src="./js/cadastrar.js"></script>
+  <script defer src="./js/snackbar.js"></script>
 </body>
 
 </html>

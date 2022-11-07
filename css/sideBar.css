@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  border: none;
   box-sizing: border-box;
+  list-style: none;
 }
 
 @font-face {
@@ -34,86 +36,95 @@
   justify-content: center;
 }
 
-.sideBar {
+.side-bar {
   background-color: #9A1032;
-  padding: 4px;
-  position: fixed;
   margin: auto;
-  cursor: pointer;
   align-items: center;
   z-index: 100;
+  position: fixed;
+  padding: 4px;
   height: 100%;
+  cursor: pointer;
+}
+
+.space {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
+
+.side-bar,
+.side-bar a {
+  text-decoration: none;
+  color: white;
+  font-family: QatarBold;
+}
+
+img {
+  width: 35px;
+  height: auto;
+}
+
+.logout {
+  transform: rotate(180deg);
 }
 
 .collapse {
   display: flex;
   flex-direction: column;
-  width: 40px !important;
   justify-content: space-between;
   position: relative;
-  transition: all 0.5s ease;
   height: 100%;
+
+  transition: all 0.5s ease;
+  width: 40px !important;
 }
 
-.sideBar a {
-  display: flex;
-  text-decoration: none;
-  color: white;
-  font-family: QatarBold;
-  align-items: center;
-  height: 50px;
-}
-
-.logo {
-  height: 85px !important;
-}
-
-img {
-  height: auto;
-  width: 35px;
-}
-
-.text {
-  padding: 16px;
+.show {
   display: none;
 }
 
-.logoutLogo {
-  transform: rotate(180deg);
-}
-
-.sideBar a:hover {
-  background-color: #d61645;
-  border-radius: 6px;
-  width: 224px;
-}
-
-.sideBar a:hover>.text {
-  display: block;
-}
-
 .expanded {
-  width: 230px !important;
   transition: all 0.5s ease;
+  width: 220px !important;
 }
 
-.expanded .text {
+.expanded .show {
   padding: 16px;
   display: block;
 }
 
-.selected {
-  background-color: #d61645;
-  border-radius: 6px;
-  width: 39px;
-  height: 50px;
-}
-
-
-.expanded .selected {
-  width: 224px;
-}
-
 .line {
-  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
+
+.logo {
+  height: 85px;
+}
+
+.line:hover {
+  background-color: #D61645;
+  width: 220px;
+  border-radius: 6px;
+}
+
+.line:hover>.show {
+  display: block;
+  padding: 16px;
+}
+
+.selected {
+  background-color: #D61645;
+  border-radius: 6px;
+  width: 40px !important;
+  height: 55px !important;
+}
+
+.selected-expanded {
+  background-color: #D61645;
+  border-radius: 6px;
+  /* width: 220px !important; */
+  height: 55px !important;
 }
