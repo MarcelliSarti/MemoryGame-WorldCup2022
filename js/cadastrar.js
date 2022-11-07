@@ -19,7 +19,9 @@ function validateCadastro() {
     return false;
   }
   else {
-    setTimeout(createSnackBar("Usuário cadastrado com sucesso, bem-vindo!", "ok"), 10000);
-    return true;
+    createSnackBar("Usuário cadastrado com sucesso, bem-vindo!", "ok");
+    setTimeout(() => {
+      return true;
+    }, 1500);
   }
 }

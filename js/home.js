@@ -202,7 +202,7 @@ function contraTempoTimer() {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            createSnackBar("Seu tempo acabou!", "ok");
+            createSnackBar("Seu tempo acabou!", "error");
             endGame = true;
             setTimeout(() => {
                 saveGameInformation();
