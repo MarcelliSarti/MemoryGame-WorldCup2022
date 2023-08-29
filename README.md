@@ -38,3 +38,6 @@ Obs sobre a tabela partidas:
 - resultado = 0-perdeu   1-ganhou
 
 Iniciar o jogo no login.html
+
+# Vídeo de Demonstração
+youtu.be/bux9YYzLfyo
