@@ -1,6 +1,39 @@
 const modal = document.getElementById("modal");
 
-const logUser = ["Wallyson", "08/01/2003", "111.111.111-11", "(11) 11111-1111", "wallyson@gmail.com", "wallyson", "1234"];
+let logUser = [];
+
+let xhttp;
+
+function createRequest() {
+  xhttp = new XMLHttpRequest();
+  if (!xhttp) {
+    createSnackBar("Não foi possível criar um objeto XMLHttpRequest!", "error");
+  }
+
+  xhttp.onreadystatechange = getDados;
+  xhttp.open('GET', 'operations/get_usuario_infos.php', true);
+  xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhttp.send();
+}
+
+async function getDados() {
+  try {
+    if (xhttp.readyState === XMLHttpRequest.DONE) {
+      if (xhttp.status === 200) {
+        logUser = JSON.parse(xhttp.responseText);
+        if (logUser[0] !== false) {
+          render();
+        }
+      }
+      else {
+        createSnackBar("Um problema ocorreu!", "error");
+      }
+    }
+  }
+  catch (e) {
+    createSnackBar("Ocorreu uma exceção: " + e, "error");
+  }
+}
 
 function render() {
   document.getElementById("txtName").value = logUser[0];
@@ -42,10 +75,44 @@ function temCerteza() {
   }
 }
 
-function salvar() {
-  createSnackBar("Dados alterados com sucesso!", "ok");
+function validateForm() {
   modal.style.display = 'none';
-  // location.reload();
+  var email_input = document.getElementById('txtEmail').value;
+
+  xhttp = new XMLHttpRequest();
+  if (!xhttp) {
+    createSnackBar("Não foi possível criar um objeto XMLHttpRequest!", "error");
+  }
+
+  xhttp.open('GET', 'operations/validar_usuario_alterar.php?email=' + encodeURIComponent(email_input), true);
+  xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhttp.send();
+  xhttp.onreadystatechange = validateFormPhp;
 }
 
-render();
+async function validateFormPhp() {
+  try {
+    if (xhttp.readyState === XMLHttpRequest.DONE) {
+      if (xhttp.status === 200) {
+        let resposta = JSON.parse(xhttp.responseText);
+        if (resposta[0]) {
+          createSnackBar("E-mail já cadastro, tente novamente!", "error");
+        } else {
+          createSnackBar("Dados alterados com sucesso!", "ok");
+          setTimeout(function () {
+            let form = document.getElementById("form");
+            form.submit();
+          }, 800);
+        }
+      }
+      else {
+        createSnackBar("Um problema ocorreu!", "error");
+      }
+    }
+  }
+  catch (e) {
+    createSnackBar("Ocorreu uma exceção: " + e.description, "error");
+  }
+}
+
+createRequest();

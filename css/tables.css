@@ -54,3 +54,41 @@
   background-color: #9A1032;
   color: white;
 }
+
+.main {
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.buttons-secondery {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+.button {
+  display: flex;
+  border: 2px solid #9A1032;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 200px;
+  font-family: QatarBold;
+  color: #9A1032;
+  cursor: pointer;
+}
+
+.button:hover,
+.active {
+  background-color: #9A1032;
+  color: white;
+}
